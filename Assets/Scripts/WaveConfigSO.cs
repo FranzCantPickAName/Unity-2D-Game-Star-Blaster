@@ -11,7 +11,7 @@ public class WaveConfigSO : ScriptableObject
         return pathPrefab.GetChild(0);
     }
 
-    public float EnemyMoveSpeed()
+    public float GetEnemyMoveSpeed()
     {
         return enemyMoveSpeed;
     }
