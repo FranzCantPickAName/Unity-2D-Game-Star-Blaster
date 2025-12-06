@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -6,10 +7,10 @@ public class EnemySpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemies());
     }
 
-    void SpawnEnemies()
+    IEnumerator SpawnEnemies()
     {
         for (int i = 0; i < currentWave.GetEnemyCount(); i++)
         {
@@ -18,6 +19,8 @@ public class EnemySpawner : MonoBehaviour
             currentWave.GetStartingWaypoint().position,
             Quaternion.identity,
             transform);
+
+            yield return new WaitForSeconds(currentWave.GetRandomEnemySpawnTime());
         }
     }
 
