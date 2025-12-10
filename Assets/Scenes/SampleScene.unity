@@ -400,19 +400,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4354417700438421424, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: upBoundPadding
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -4354417700438421424, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: downBoundPadding
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -4354417700438421424, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: leftBoundPadding
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -4354417700438421424, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: rightBoundPadding
+    - target: {fileID: -521428424114342849, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713554975503915617, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
+      propertyPath: isFiring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713554975503915617, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5016008855088307624, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
@@ -459,25 +459,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7937767806891487347, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7937767806891487347, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7937767806891487347, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7937767806891487347, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7937767806891487347, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+    - target: {fileID: 5634279067021734025, guid: 8e4fdd2f71e933e489f310ba863b7582, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7937767806891487347}
   - component: {fileID: 5934089218863298318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spaceship_blue_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355258493828674075}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14, y: -3.42, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103,7 +103,8 @@ GameObject:
   - component: {fileID: 4483271590953394254}
   - component: {fileID: -8949048481465351909}
   - component: {fileID: -521428424114342849}
-  m_Layer: 0
+  - component: {fileID: 2713554975503915617}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,10 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 10
-  leftBoundPadding: 0
-  rightBoundPadding: 0
-  upBoundPadding: 0
-  downBoundPadding: 0
+  leftBoundPadding: 1
+  rightBoundPadding: 1
+  upBoundPadding: 6
+  downBoundPadding: 2
 --- !u!50 &4483271590953394254
 Rigidbody2D:
   serializedVersion: 5
@@ -219,3 +220,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 50
+--- !u!114 &2713554975503915617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634279067021734025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d1d183a1e26fe44836c060557b4cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shooter
+  projectilePrefab: {fileID: 8331012661362760526, guid: 5e60d822b3fb7e346a63693c070cf4e0, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  fireRate: 0.2
+  isFiring: 0
