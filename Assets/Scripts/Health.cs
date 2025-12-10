@@ -1,8 +1,14 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] int health = 50;
+    [SerializeField] ParticleSystem hitParticles;
+
+    [SerializeField] bool applyCameraShake;
+    CameraShake cameraShake;
+    AudioManager audioManager;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -11,7 +17,14 @@ public class Health : MonoBehaviour
         if (damageDealer != null )
         {
             TakeDamage(damageDealer.GetDamage());
+            PlayHitParticles();
             damageDealer.Hit();
+            audioManager.PlayDamageSFX();
+
+            if (applyCameraShake)
+            {
+                cameraShake.Play();
+            }
         }
     }
 
@@ -23,10 +36,21 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void PlayHitParticles()
+    {
+        if (hitParticles != null)
+        {
+            ParticleSystem particles = Instantiate(hitParticles, transform.position, Quaternion.identity);
+            Destroy(particles, particles.main.duration + particles.main.startLifetime.constantMax);
+        }
+
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     // Update is called once per frame

@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 50
+  hitParticles: {fileID: 7062567651617219347, guid: a8f9dd04c51acf247857046e65538e8a, type: 3}
 --- !u!114 &2713554975503915617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,5 +236,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8331012661362760526, guid: 5e60d822b3fb7e346a63693c070cf4e0, type: 3}
   projectileSpeed: 10
   projectileLifetime: 5
-  fireRate: 0.2
+  baseFireRate: 0.2
+  useAI: 0
+  minimumFireRate: 0.2
+  fireRateVariance: 0
   isFiring: 0

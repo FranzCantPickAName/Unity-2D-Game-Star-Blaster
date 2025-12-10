@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3027808316876238630}
   - component: {fileID: 7279728124826063093}
   m_Layer: 7
-  m_Name: spaceship_red_0
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 1596241007560550432}
   - component: {fileID: 331401702237326447}
   - component: {fileID: 8787109336796273865}
+  - component: {fileID: 8976733395738426540}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -228,3 +229,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 50
+  hitParticles: {fileID: 7062567651617219347, guid: a8f9dd04c51acf247857046e65538e8a, type: 3}
+--- !u!114 &8976733395738426540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582430361198422744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d1d183a1e26fe44836c060557b4cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shooter
+  projectilePrefab: {fileID: 8331012661362760526, guid: 7df8de4fac30a6f4f80354e66c350c98, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  baseFireRate: 0.4
+  useAI: 1
+  minimumFireRate: 0.2
+  fireRateVariance: 0.2
+  isFiring: 0
